@@ -103,3 +103,33 @@
 // alert( sumInput() );
 // ------------------------------------
     
+
+// Задача №9 for [1, 2, 2] return 1^2 + 2^2 + 2^2 = 9
+// function squareSum(numbers){
+//     let arr2 = []
+//     numbers.forEach(function(values){
+//         return arr2.push(values**2)
+// }) 
+// return arr2.reduce(function(acc,item){
+//     return acc+item;
+// },0)
+// }
+// alert(squareSum([1, 2, 2])) // 9
+
+
+// function squareSum(numbers){
+//   return numbers.reduce(function(sum, n){
+//     return (n*n) + sum;
+//   }, 0)
+// }
+// alert(squareSum([1, 2, 2])) // 9
+
+
+// function squareSum(numbers){
+//     let n = 0
+//     numbers.forEach(function(values){
+//         n += values*values
+//     });
+//   return n  
+// }
+// alert(squareSum([1, 2, 2])) // 9
