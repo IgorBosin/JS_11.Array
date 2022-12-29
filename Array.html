@@ -71,6 +71,7 @@
 // arr[2](); // a,b,function(){...}
 // ------------------------------------
 
+    
 
 // Задача №8 сумма введенных чисел
 // function sumInput() {
@@ -87,6 +88,7 @@
 // alert(sumInput())
 
 
+    
 // function sumInput() {
 // let numbers = [];
 // while (true) {
@@ -103,6 +105,7 @@
 // alert( sumInput() );
 // ------------------------------------
     
+    
 
 // Задача №9 for [1, 2, 2] return 1^2 + 2^2 + 2^2 = 9
 // function squareSum(numbers){
@@ -116,6 +119,7 @@
 // }
 // alert(squareSum([1, 2, 2])) // 9
 
+    
 
 // function squareSum(numbers){
 //   return numbers.reduce(function(sum, n){
@@ -125,6 +129,7 @@
 // alert(squareSum([1, 2, 2])) // 9
 
 
+    
 // function squareSum(numbers){
 //     let n = 0
 //     numbers.forEach(function(values){
@@ -133,3 +138,43 @@
 //   return n  
 // }
 // alert(squareSum([1, 2, 2])) // 9
+    
+    
+    
+// Задача №10 подсчитать все true
+// function countSheeps(arrayOfSheep) {
+//     let n = 0
+//     for(const values of arrayOfSheep){
+//         if(values === true) {
+//             n++
+//         }
+//     }
+//     return n
+// }
+// alert (countSheeps([
+//   true,  true,  true,  false,
+//   true,  true,  true,  true ,
+//   false, false, true,  true]))
+
+
+//   function countSheeps(arrayOfSheep) {
+//     return arrayOfSheep.filter(Boolean).length;      
+// }
+// alert (countSheeps([
+//   true,  true,  true,  false,
+//   true,  true,  true,  true ,
+//   false, false, true,  true]))  
+
+    
+
+// function countSheeps(arrayOfSheep) {
+//     let num = 0;
+//     for (let i = 0 ; i < arrayOfSheep.length ; i++) 
+//         if (arrayOfSheep[i] == true)
+//             num++;
+//     return num;
+// }
+//   alert (countSheeps([
+//   true,  true,  true,  false,
+//   true,  true,  true,  true ,
+//   false, false, true,  true]))  
