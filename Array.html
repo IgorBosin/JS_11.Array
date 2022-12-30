@@ -8,18 +8,20 @@
 </head>
 <body>
 <script>
-// ------------------------------------
 
 
 // Задача №1 Длина массива
+    
 // let arr = ['Ваня', 'Петя', 'Оля',];
 // let newArr = arr;
 // newArr.push('Игорь');
 // alert(arr.length)
 // ------------------------------------
 
+    
 
 // Задача №2 Добавление изменение и удаление элементов массива
+    
 // let arr = ['Ivan', 'Petya']
 // arr[2] = 'Olga'
 // arr[1] = 'Igor'
@@ -28,16 +30,20 @@
 // alert (arr)
 // ------------------------------------
 
+    
 
 // Задача №3 Удалить 2ой элемент и вернуть его в  переменную
+    
 // let arr = ['Ваня', 'Иштван', 'Оля'];
 // let arr2 = arr.splice(1,1)
 // alert(arr)
 // alert(arr2)
 // ------------------------------------
 
+    
 
 // Задача №4 Сделать из строки массив
+    
 // let str = 'Ваня, Оля, Коля';
 // let arr = str.split(', ')
 // alert(Array.isArray(arr))
@@ -45,15 +51,19 @@
 // ------------------------------------
 
 
+    
 // Задача №5 Изменить fruits через другую переменную
+    
 // let fruits = ["Яблоки", "Груша", "Апельсин"];
 // let shoppingCart = fruits;
 // shoppingCart.push("Банан");
 // alert( fruits.length ); // 4
 // ------------------------------------
 
+    
 
 // Задача №6 Добавление изменение и удаление элементов массива
+    
 // let styles = ['Jazz', 'Bluzze']
 // styles.push('RocknRoll')
 // styles.splice(1,1,'Classic')
@@ -63,7 +73,9 @@
 // ------------------------------------
 
 
+    
 // Задача №7 результат вывода?
+    
 // let arr = ["a", "b"];
 // arr.push(function() {
 //   alert( this );
@@ -74,6 +86,7 @@
     
 
 // Задача №8 сумма введенных чисел
+    
 // function sumInput() {
 //     let summ = [];
 //     while (true) {
@@ -108,6 +121,7 @@
     
 
 // Задача №9 for [1, 2, 2] return 1^2 + 2^2 + 2^2 = 9
+    
 // function squareSum(numbers){
 //     let arr2 = []
 //     numbers.forEach(function(values){
@@ -142,6 +156,7 @@
     
     
 // Задача №10 подсчитать все true
+    
 // function countSheeps(arrayOfSheep) {
 //     let n = 0
 //     for(const values of arrayOfSheep){
@@ -157,6 +172,7 @@
 //   false, false, true,  true]))
 
 
+    
 //   function countSheeps(arrayOfSheep) {
 //     return arrayOfSheep.filter(Boolean).length;      
 // }
@@ -183,6 +199,7 @@
 
 
 // Задача №11 Вернуть массив чисел умноженный на 2
+    
 function maps(x){
 return x.map(function(item){
   return item*2
@@ -204,6 +221,7 @@ alert(maps([1,2,3]))
 
 
 // Задача №12 Вернуть обратный массив чисел из одного числа
+    
 // function digitize(n) {
 //     let arr = []
 //     n = String(n)
@@ -214,6 +232,7 @@ alert(maps([1,2,3]))
 // }
 // console.log(digitize(32145))
 
+    
 
 // function digitize(n) {
 //     return String(n).split('').map(Number).reverse()
@@ -221,14 +240,71 @@ alert(maps([1,2,3]))
 // console.log(digitize(32145))
 
 
+    
 // function digitize(n) {
 //     return n.toString().split('').map(Number).reverse();
 // }
 // console.log(digitize(32145))
 
 
+    
 // function digitize(n) {
 //     return Array.from(String(n), Number).reverse();
 // }
 // console.log(digitize(32145))
 // ------------------------------------
+
+    
+    
+// Задача №13 Вернуть сумму массива чисел [1,-4,7,12]=>1+7+12=20
+// function positiveSum(arr) {
+//     let arrFilter = arr.filter(function(item) {
+//         return item > 0
+//     })
+//     return arrFilter.reduce(function(acc,item){
+//         return acc+item
+//     },0)
+// }
+// console.log(positiveSum([1,-4,12]))
+
+
+    
+// function positiveSum(arr) {
+//     let arrFilter = arr.filter(item => 
+//         item > 0 // т.к.выражен одно-можно без {} и без return
+//     )
+//     return arrFilter.reduce((acc,item) => 
+//         acc+item // // т.к.выражен одно-можно без {} и без return
+//     ,0)
+// }
+// console.log(positiveSum([1,-4,12]))
+
+    
+    
+// function positiveSum(arr) {
+//     let num = 0
+//     for(let i=0 ; i < arr.length ; i++ ) {
+//         if(arr[i] > 0 ) {num += arr[i]}
+//     }
+//     return num
+// }
+// console.log(positiveSum([10,-4,12]))
+
+
+    
+// function positiveSum(arr) {
+//     let summ = 0
+//     arr.reduce(function(acc,item) {
+//         if (item > 0) {summ +=item}
+//     },0)
+//     return summ
+// }
+// console.log(positiveSum([10,-4,12]))
+
+
+    
+// function positiveSum(arr) {
+//     return arr.filter(item => item>0).reduce((acc,item) => acc+item,0)
+// }
+// console.log(positiveSum([-10,4,12]))
+// ------------------------------------    
