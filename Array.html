@@ -198,6 +198,37 @@ alert(maps([1,2,3]))
 
 
 maps = x => x.map(e => e * 2);
-alert(maps([1,2,3]))    
-    
- 
+alert(maps([1,2,3]))       
+// ------------------------------------
+
+
+
+// Задача №12 Вернуть обратный массив чисел из одного числа
+// function digitize(n) {
+//     let arr = []
+//     n = String(n)
+//     for (const char of n) {
+//         arr.push(+char)
+//     }
+//     return arr.reverse()
+// }
+// console.log(digitize(32145))
+
+
+// function digitize(n) {
+//     return String(n).split('').map(Number).reverse()
+// }
+// console.log(digitize(32145))
+
+
+// function digitize(n) {
+//     return n.toString().split('').map(Number).reverse();
+// }
+// console.log(digitize(32145))
+
+
+// function digitize(n) {
+//     return Array.from(String(n), Number).reverse();
+// }
+// console.log(digitize(32145))
+// ------------------------------------
