@@ -463,6 +463,38 @@ alert(maps([1,2,3]))
 //   return x.map(a => +a).reduce((a, b) => a + b);
 // }
 // console.log(sumMix(['5', '0', 9, 3, 2, 1, '9', 6, 7]))
+// ------------------------------------
+
+
+
+// Задача №20 вернуть только нечетные элементы массива
+
+// function removeEveryOther(arr){
+//     let arr2 = []
+//     for(let i=0; i < arr.length; i++)
+//     if (i%2===0) arr2.push(arr[i])
+//     return arr2
+//   }
+//   console.log(removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+
+
+
+// function removeEveryOther(arr){
+//   return arr.filter(function(elem, index) {
+//     return index % 2 === 0;
+//   });
+// }  
+// console.log(removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+
+
+
+// function removeEveryOther(arr){
+//     for(i = 1; i < arr.length; i++){
+//       arr.splice(i,1)
+//     }
+//     return arr
+//   }
+// console.log(removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
 
         
     
