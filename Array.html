@@ -346,6 +346,7 @@ alert(maps([1,2,3]))
     
     
 // Задача №16 перемножить числа массива
+    
 // function grow(x){
 // return x.reduce(function(acc,item){
 //   return acc*item
@@ -358,3 +359,54 @@ alert(maps([1,2,3]))
 // const grow = (nums) => nums.reduce((product, num) => product * num, 1);
 // alert(grow([1, 2, 3, 4])) //24
 // ------------------------------------
+
+
+
+// Задача №17 получить сумму двух массивов
+    
+// function arrayPlusArray(arr1, arr2) {
+//   arr1 = arr1.reduce(function(acc, item){
+//     return acc+item
+//   },0)
+//    arr2 = arr2.reduce(function(acc, item){
+//     return acc+item
+//   },0)
+//   return arr1 + arr2; 
+// }
+// alert(arrayPlusArray([1, 2, 3], [4, 5, 6]))
+
+
+
+// function arrayPlusArray(arr1, arr2) {
+//     return arr1.concat(arr2).reduce(function(acc,item){
+//         return acc+item
+//     },0)
+// }
+// alert(arrayPlusArray([1, 2, 3], [4, 5, 6]))
+
+
+
+// function arrayPlusArray(arr1, arr2) {
+//     return arr1.concat(arr2).reduce((acc,item) =>
+//         acc+item
+//     ,0)
+// }
+// alert(arrayPlusArray([1, 2, 3], [4, 5, 6]))
+
+
+
+function arrayPlusArray(arr1, arr2) {
+    let summ = 0
+    for (let i = 0; i < arr1.length; i++) {
+        summ += arr1[i]
+    }
+    for (let i = 0; i < arr1.length; i++) {
+        summ += arr2[i]
+    }
+    return summ
+}
+alert(arrayPlusArray([1, 2, 3], [4, 5, 6]))
+
+    
+    
+    
