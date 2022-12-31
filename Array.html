@@ -436,8 +436,33 @@ alert(maps([1,2,3]))
 //     "use strict";
 //     return words.join(" ").trim();    
 // };
+// ------------------------------------
 
 
-    
-    
+
+// Задача №19 получить сумму массива из чисел и строк 
+// ['5', '0', 9, 3, 2, 1, '9', 6, 7] -> 42
+
+// function sumMix(x){
+// return x.reduce(function(acc,item){
+//   return +acc+ +item
+// },0)
+// }
+// console.log(sumMix(['5', '0', 9, 3, 2, 1, '9', 6, 7]))
+
+
+
+// function sumMix(x){
+//     return x.reduce((acc,item) => +acc + +item)
+// }
+// console.log(sumMix(['5', '0', 9, 3, 2, 1, '9', 6, 7]))
+
+
+
+// function sumMix(x){
+//   return x.map(a => +a).reduce((a, b) => a + b);
+// }
+// console.log(sumMix(['5', '0', 9, 3, 2, 1, '9', 6, 7]))
+
+        
     
