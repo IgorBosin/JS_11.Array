@@ -519,6 +519,24 @@ alert(maps([1,2,3]))
 
 // const divisibleBy = (numbers, divisor) => numbers.filter(number => !(number % divisor));
 // console.log(divisibleBy([1,3,5,7,8,10,15], 2))
+// ------------------------------------
+
+
+
+// Задача №22 вернуть true если сумма (первого элемента)^2 больше суммы второго^3, иначе false
+
+// function arrayMadness(a, b) {
+//     if ((a.reduce((acc,item) => (acc+item**2),0)) > (b.reduce((acc,item) => (acc+item**3),0))) return true
+//     else return false
+// }
+// console.log(arrayMadness([5,6,7],[4,5,6]));
+
+
+
+// function arrayMadness(a, b) {
+//     a.reduce((acc,item) => (acc+item**2),0) > (b.reduce((acc,item) => (acc+item**3),0))
+// }
+// console.log(arrayMadness([5,6,7],[4,5,6]));
 
         
     
