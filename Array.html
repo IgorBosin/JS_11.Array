@@ -569,6 +569,19 @@ function addLength(str) {
 }
 
 console.log(addLength('apple ban')) // [ 'apple 5', 'ban 3' ]    
+// ------------------------------------
 
+
+
+// Задача №25 найти все числа в интервале между integer и limit которые делятся без остатка (limit/integer) (8 kyu Find Multiples of a Number)
         
-    
+function findMultiples(integer, limit) {
+    let arr = []
+    for (let i = integer; i <= limit; i += integer) {
+        arr.push(i)
+    }
+    return arr
+}
+
+console.log(findMultiples(5, 25)) // [ 5, 10, 15, 20, 25 ]
+ 
