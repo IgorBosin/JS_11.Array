@@ -537,6 +537,26 @@ alert(maps([1,2,3]))
 //     a.reduce((acc,item) => (acc+item**2),0) > (b.reduce((acc,item) => (acc+item**3),0))
 // }
 // console.log(arrayMadness([5,6,7],[4,5,6]));
+// ------------------------------------
+
+
+
+// Задача №23 все числа массива вернуть ЧИСЛАМИ с обратным знаком (8 kyu Invert values)
+    
+function invert(array) {
+    let arr2 = []
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] >= 0) {
+            arr2.push(+(`-${array[i]}`))
+        } else if (array[i] < 0) {
+            arr2.push(0 - array[i])
+        }
+    }
+    return arr2
+}
+
+console.log(invert([1, 2, -3, -4, 5])) // [ -1, -2, 3, 4, -5 ]
+
 
         
     
