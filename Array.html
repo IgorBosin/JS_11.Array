@@ -556,7 +556,19 @@ function invert(array) {
 }
 
 console.log(invert([1, 2, -3, -4, 5])) // [ -1, -2, 3, 4, -5 ]
+// ------------------------------------
 
+
+
+// Задача №24 строку конвертировать в массив и прибавить к каждому элементу его длину (8 kyu Add Length)
+    
+function addLength(str) {
+    return str.split(' ').map(function (item) {
+        return item + " " + item.length
+    })
+}
+
+console.log(addLength('apple ban')) // [ 'apple 5', 'ban 3' ]    
 
         
     
