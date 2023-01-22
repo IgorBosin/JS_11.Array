@@ -718,6 +718,23 @@ function monkeyCount(n) {
     return arr
 }
 console.log(monkeyCount(5)) // [ 1, 2, 3, 4, 5 ]    
-    
-    
+// ------------------------------------
+
+
+
+// Задача №28 просуммировать различия между последовательными парами в массиве в порядке убывания (8 kyu Sum of differences in array) 
+
+function sumOfDifferences(arr) {
+    let a = 0
+    let arr2 = arr.sort(function (a, b) {
+        return b - a
+    })
+    for (let i = 0; i < arr2.length - 1; i++) {
+        a += (arr2[i]) - (arr2[i + 1])
+    }
+    return a
+}
+console.log(sumOfDifferences([1, 2, 10])) // (10-2)+(2-1) = 9
+console.log(sumOfDifferences([-3, -2, -1])) // (-1-(-2))+(-2-(-3)) = 2
+
     
