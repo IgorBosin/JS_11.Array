@@ -734,7 +734,22 @@ function sumOfDifferences(arr) {
     }
     return a
 }
+
 console.log(sumOfDifferences([1, 2, 10])) // (10-2)+(2-1) = 9
 console.log(sumOfDifferences([-3, -2, -1])) // (-1-(-2))+(-2-(-3)) = 2
+// ------------------------------------
 
+
+
+// Задача №29 найти среднее значение чисел в массиве (8 kyu Calculate average)
+
+function findAverage(array) {
+    if (array.length == 0) return 0
+    let arr = array.reduce(function (acc, item) {
+        return (acc + item)
+    }, 0)
+    return arr / array.length
+}
+
+console.log(findAverage([1, 2, 3, 4])) // 2.5
     
