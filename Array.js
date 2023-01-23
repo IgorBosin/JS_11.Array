@@ -776,3 +776,26 @@ function sum(numbers) {
     }, 0)
 };
 console.log(sum([1, 5.2, 4, 0, -1])) // 9.2
+// ------------------------------------
+
+
+
+// Задача №32 Вернуть только те значения, которые без остатка делятся на индекс (8 kyu Multiple of index)  
+
+// Вариант 1
+function multipleOfIndex(array) {
+    let arr = []
+    for (let index in array) {
+        if (array[index] % index == 0) arr.push(array[index])
+    }
+    return arr
+}
+console.log(multipleOfIndex([22, -6, 32, 82, 9, 25])) // [-6, 32, 25]
+
+// Вариант 2
+function multipleOfIndex(array) {
+    return array.filter(function (value, index) {
+        return value % index == 0
+    })
+}
+console.log(multipleOfIndex([22, -6, 32, 82, 9, 25])) // [-6, 32, 25]
