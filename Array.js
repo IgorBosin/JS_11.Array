@@ -763,3 +763,16 @@ function check(a, x) {
 };
 console.log(check([80, 117, 115, 104, 45, 85, 112, 115], 45)) // true
 console.log(check(['what', 'a', 'great', 'kata'], 'kat')) // false
+// ------------------------------------
+
+
+
+// Задача №31 Вернуть сумму чисел массива(8 kyu Sum Arrays)   
+
+function sum(numbers) {
+    "use strict";
+    return numbers.reduce(function (acc, item) {
+        return acc + item
+    }, 0)
+};
+console.log(sum([1, 5.2, 4, 0, -1])) // 9.2
