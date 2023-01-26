@@ -718,4 +718,37 @@ function multipleOfIndex(array) {
     })
 }
 console.log(multipleOfIndex([22, -6, 32, 82, 9, 25])) // [-6, 32, 25]
+//_____________________________________________________________________________________________________________________
 
+
+// Задача №33 массив чисел превратить в буквы(ASCII). Если буква глассная, то заменить число (8 kyu Is there a vowel in there?)
+// Вариант 1
+function isVow(a) {
+    for (let i in a) {
+        if (String.fromCharCode(a[i]) == ['u']) {
+            a.splice(i, 1, String.fromCharCode(a[i]))
+        }
+        if (String.fromCharCode(a[i]) == ['a']) {
+            a.splice(i, 1, String.fromCharCode(a[i]))
+        }
+        if (String.fromCharCode(a[i]) == ['i']) {
+            a.splice(i, 1, String.fromCharCode(a[i]))
+        }
+        if (String.fromCharCode(a[i]) == ['o']) {
+            a.splice(i, 1, String.fromCharCode(a[i]))
+        }
+        if (String.fromCharCode(a[i]) == ['e']) {
+            a.splice(i, 1, String.fromCharCode(a[i]))
+        }
+    }
+    return a
+}
+console.log(isVow([101, 117, 110, 113, 113])) // [ 'e', 'u', 110, 113, 113 ]
+// Вариант 2
+
+function isVow(a) {
+    return a.map(function (item) {
+        return 'aeuio'.includes(String.fromCharCode(item)) ? String.fromCharCode(item) : item
+    })
+}
+console.log(isVow([101, 117, 110, 113, 114])) // [ 'e', 'u', 110, 113, 114 ]
