@@ -752,3 +752,17 @@ function isVow(a) {
     })
 }
 console.log(isVow([101, 117, 110, 113, 114])) // [ 'e', 'u', 110, 113, 114 ]
+//_____________________________________________________________________________________________________________________
+
+
+// Задача №34 вычислить корень из всех чисел массива. Если невозможно, то возвести в квадрат (8 kyu To square(root) or not to square(root))
+function squareOrSquareRoot(array) {
+    let arr = []
+    for (i = 0; i < array.length; i++) {
+        if (Number.isInteger(Math.sqrt(array[i]))) {
+            arr.push(Math.sqrt(array[i]))
+        } else arr.push(array[i] ** 2)
+    }
+    return arr
+}
+console.log(squareOrSquareRoot([4, 3, 9, 7, 2, 1])) // [2,9,3,49,4,1]
