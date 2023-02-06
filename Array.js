@@ -776,3 +776,27 @@ function squareOrSquareRoot(array) {
     });
 }
 console.log(squareOrSquareRoot([4, 3, 9, 7, 2, 1])) // [2,9,3,49,4,1]
+//_____________________________________________________________________________________________________________________
+
+
+// Задача №35 удалить все дублирующие значения в массиве (8 kyu Remove duplicates from list)
+// Вариант 1
+function distinct(a) {
+    let newSet = new Set (a) // Set(2) { 1, 2 }
+    return Array.from(newSet)
+}
+console.log(distinct([1, 1, 2]))
+
+// Вариант 2
+function distinct(a) {
+    return [...new Set(a)]
+}
+console.log(distinct([1, 1, 2]))
+
+// Вариант 3
+function distinct(a) {
+    return a.filter((item,index,arr)=>{
+        return arr.indexOf(item)==index
+    })
+}
+console.log(distinct([1, 1, 2]))
