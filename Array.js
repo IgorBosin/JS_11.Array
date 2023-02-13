@@ -800,3 +800,26 @@ function distinct(a) {
     })
 }
 console.log(distinct([1, 1, 2]))
+//_____________________________________________________________________________________________________________________
+
+
+// Задача №36 отзеркалить каждое слово в строке (7 kyu Reverse words)
+// Вариант 1
+function reverseWords(str) {
+    let arr = []
+    let a =(str.split(' ').map(item => item.split('')).map(item=> item.reverse()))
+    for (let i = 0; i < a.length; i++) {
+        arr.push(a[i].join(''))
+    }
+    let e = arr.join(' ')
+    return e
+}
+console.log(reverseWords('The quick brown fox jumps over the lazy dog.'))
+
+// Вариант 2
+function reverseWords(str) {
+    return str.split(' ').map(function(word){
+        return word.split('').reverse().join('');
+    }).join(' ');
+}
+console.log(reverseWords('The quick brown fox jumps over the lazy dog.'))
