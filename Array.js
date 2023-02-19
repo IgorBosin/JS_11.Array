@@ -823,3 +823,37 @@ function reverseWords(str) {
     }).join(' ');
 }
 console.log(reverseWords('The quick brown fox jumps over the lazy dog.'))
+//_____________________________________________________________________________________________________________________
+
+
+// Задача №37 сравнить сумму массива(первого аргумента) со вторым аргументом (8 kyu How good are you really?)
+// Вариант 1
+function betterThanAverage(classPoints, yourPoints) {
+    let a = classPoints.reduce((acc, item) => (acc + item), 0)
+    return yourPoints > a / classPoints.length
+}
+console.log(betterThanAverage([2, 3], 5)) // true
+console.log(betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90], 9)) // false
+
+// Вариант 2
+function betterThanAverage(classPoints, yourPoints) {
+    let a = 0
+    for (const classPoint of classPoints) {
+        a += classPoint / classPoints.length
+    }
+    return a < yourPoints
+}
+console.log(betterThanAverage([2, 3], 5)) // true
+console.log(betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90], 9)) // false
+
+// Вариант 3
+function betterThanAverage(classPoints, yourPoints) {
+    let a = 0
+    for (let i = 0; i < classPoints.length; i++) {
+        a += classPoints[i] / classPoints.length
+    }
+    return a < yourPoints
+}
+console.log(betterThanAverage([2, 3], 5)) // true
+console.log(betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90], 9)) // false
+
