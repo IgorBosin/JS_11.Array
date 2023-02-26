@@ -856,4 +856,16 @@ function betterThanAverage(classPoints, yourPoints) {
 }
 console.log(betterThanAverage([2, 3], 5)) // true
 console.log(betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90], 9)) // false
+//_____________________________________________________________________________________________________________________
+
+
+// Задача №38 умножение чисел которые больше 0 (8 kyu Beginner Series #1 School Paperwork)
+function paperwork(n, m) {
+    return (n > 0 && m > 0) ? n * m : 0
+}
+console.log(paperwork(5, -5)) // 0
+console.log(paperwork(5, 5)) // 25
+//_____________________________________________________________________________________________________________________
+
+
 
