@@ -868,4 +868,25 @@ console.log(paperwork(5, 5)) // 25
 //_____________________________________________________________________________________________________________________
 
 
+// Задача №39 создание массива чисел от n до 1  (8 kyu Reversed sequence)
+// Вариант 1
+const reverseSeq = n => {
+    let arr = []
+    for (let i = n; i > 0; i--) {
+        arr = [...arr, i]
+    }
+    return arr
+};
+console.log(reverseSeq(5)) // [5, 4, 3, 2, 1]
+
+// Вариант 2
+const reverseSeq = n => {
+    let arr = []
+    for (let i = n; i > 0; i--) {
+        arr.push(i)
+    }
+    return arr
+};
+console.log(reverseSeq(5)) // [5, 4, 3, 2, 1]
+
 
