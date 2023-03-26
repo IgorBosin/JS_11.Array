@@ -888,5 +888,24 @@ const reverseSeq = n => {
     return arr
 };
 console.log(reverseSeq(5)) // [5, 4, 3, 2, 1]
+//_____________________________________________________________________________________________________________________
+
+
+// Задача №40 найти меньшее число в массиве (8 kyu Find the smallest integer in the array)
+// Вариант 1
+class SmallestIntegerFinder {
+    findSmallestInt(args) {
+        return (args.sort((a,b)=>a-b))[0]
+    }
+}
+console.log(findSmallestInt([78, 56, 232, 12, 18])) // 12
+
+// Вариант 2
+class SmallestIntegerFinder {
+    findSmallestInt(args) {
+        return Math.min(...args)
+    }
+}
+console.log(findSmallestInt([78, 56, 232, 12, 18])) // 12
 
 
