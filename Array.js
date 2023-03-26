@@ -907,5 +907,35 @@ class SmallestIntegerFinder {
     }
 }
 console.log(findSmallestInt([78, 56, 232, 12, 18])) // 12
+//_____________________________________________________________________________________________________________________
 
 
+// Задача №41 рассчитать индекс массы тела и вывести текстовое обозначение (8 kyu Calculate BMI)
+// Вариант 1
+function bmi(weight, height) {
+    let a = weight/height**2
+    return a <= 18.5
+        ? 'Underweight'
+        : a <= 25
+            ? 'Normal'
+            : a <= 30
+                ? 'Overweight'
+                : 'Obese'
+}
+console.log(bmi(80, 1.80)) // "Normal"
+
+// Вариант 2
+function bmi(weight, height) {
+    let a = weight / height ** 2
+    switch (true) {
+        case a <= 18.5:
+            return 'Underweight'
+        case a <= 25:
+            return 'Normal'
+        case a <= 30:
+            return 'Overweight'
+        default:
+            return 'Obese'
+    }
+}
+console.log(bmi(80, 1.80)) // "Normal"
