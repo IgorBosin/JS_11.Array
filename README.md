@@ -51,6 +51,7 @@
 51. Задача №39 создание массива чисел от n до 1  (8 kyu Reversed sequence)
 52. Задача №40 найти меньшее число в массиве (8 kyu Find the smallest integer in the array) 
 53. Задача №41 рассчитать индекс массы тела и вывести текстовое обозначение (8 kyu Calculate BMI)
+53. Задача №42 найти первое непоследовательное число в массиве (8 kyu Find the first non-consecutive number)
 
 
 

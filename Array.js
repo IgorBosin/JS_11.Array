@@ -939,3 +939,30 @@ function bmi(weight, height) {
     }
 }
 console.log(bmi(80, 1.80)) // "Normal"
+//_____________________________________________________________________________________________________________________
+
+
+// Задача №42 Найти первое непоследовательное число в массиве (8 kyu Find the first non-consecutive number)
+// Вариант 1
+function firstNonConsecutive(arr) {
+    let num = arr[0] - 1
+    for (const s of arr) {
+        if (s === num + 1) {
+            num = s
+        } else return s
+    }
+    return null
+}
+console.log(firstNonConsecutive([1, 2, 3, 4, 6, 7, 8])) // 6
+console.log(firstNonConsecutive([1, 2, 3, 4])) // null
+console.log(firstNonConsecutive([-10,-8,-7,-6,-5,-4,-3,-2,-1])) // -8
+
+// Вариант 2
+function firstNonConsecutive (arr) {
+    let result = arr.find((val, index) => val !== index + arr[0]);
+
+    return (Number.isInteger(result)) ? result : null;
+}
+console.log(firstNonConsecutive([1, 2, 3, 4, 6, 7, 8])) // 6
+console.log(firstNonConsecutive([1, 2, 3, 4])) // null
+console.log(firstNonConsecutive([-10, -8, -7, -6, -5, -4, -3, -2, -1])) // -8
