@@ -52,6 +52,8 @@
 52. Задача №40 найти меньшее число в массиве (8 kyu Find the smallest integer in the array) 
 53. Задача №41 рассчитать индекс массы тела и вывести текстовое обозначение (8 kyu Calculate BMI)
 53. Задача №42 найти первое непоследовательное число в массиве (8 kyu Find the first non-consecutive number)
+54. Задача №43 Найти сумму двух наименьших чисел массива (7 kyu Sum of two lowest positive integers) (деструктуризация)
+
 
 
 

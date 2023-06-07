@@ -966,3 +966,29 @@ function firstNonConsecutive (arr) {
 console.log(firstNonConsecutive([1, 2, 3, 4, 6, 7, 8])) // 6
 console.log(firstNonConsecutive([1, 2, 3, 4])) // null
 console.log(firstNonConsecutive([-10, -8, -7, -6, -5, -4, -3, -2, -1])) // -8
+//_____________________________________________________________________________________________________________________
+
+
+// Задача №43 Найти сумму двух наименьших чисел массива (7 kyu Sum of two lowest positive integers)
+// Вариант 1
+function sumTwoSmallestNumbers(numbers) {
+    return numbers.sort((a, b) => a - b).slice(0, 2).reduce((acc, item) => acc + item)
+}
+console.log(sumTwoSmallestNumbers([5, 19, 12, 8, 22])) // 13
+
+// Вариант 2
+function sumTwoSmallestNumbers(numbers) {
+    let num = numbers.sort((a, b) => a - b)
+    return num[0] + num[1]
+}
+console.log(sumTwoSmallestNumbers([5, 19, 12, 8, 22])) // 13
+
+// Вариант 3
+function sumTwoSmallestNumbers(numbers) {
+    let [a,b] = numbers.sort((a, b) => a - b)
+    return a+b
+}
+console.log(sumTwoSmallestNumbers([5, 19, 12, 8, 22])) // 13
+//_____________________________________________________________________________________________________________________
+
+
