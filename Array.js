@@ -992,3 +992,58 @@ console.log(sumTwoSmallestNumbers([5, 19, 12, 8, 22])) // 13
 //_____________________________________________________________________________________________________________________
 
 
+// Задача №44 Найти среднее арифметическое 3х чисел и присвоить числу ранг (А,В..) (8 kyu Grasshopper - Grade book)
+// Вариант 1
+function getGrade(s1, s2, s3) {
+    let a = (s1 + s2 + s3) / 3
+    if (a >= 90 && a <= 100) {
+        return "A"
+    } else if (a >= 80 && a < 90) {
+        return 'B'
+    } else if (a >= 70 && a < 80) {
+        return 'C'
+    } else if (a >= 60 && a < 70) {
+        return 'D'
+    } else return 'F'
+}
+console.log(getGrade(95, 90, 93)) // A
+console.log(getGrade(44, 55, 52)) // F
+
+// Вариант 2
+function getGrade(...scores) {
+    let average = scores.reduce((a, b) => a + b) / scores.length
+    if (average >= 90) return 'A'
+    else if (average >= 80) return 'B'
+    else if (average >= 70) return 'C'
+    else if (average >= 60) return 'D'
+    else return 'F'
+}
+console.log(getGrade(95, 90, 93)) // A
+console.log(getGrade(44, 55, 52)) // F
+
+// Вариант 3
+function getGrade(s1, s2, s3) {
+    var avg = (s1 + s2 + s3) / 3;
+    switch (true) {
+        case (avg >= 90):
+            return 'A';
+        case (avg >= 80):
+            return 'B';
+        case (avg >= 70):
+            return 'C';
+        case (avg >= 60):
+            return 'D';
+        default:
+            return 'F';
+    }
+}
+console.log(getGrade(95, 90, 93)) // A
+console.log(getGrade(44, 55, 52)) // F
+
+// Вариант 4
+function getGrade (s1, s2, s3) {
+    var s = (s1 + s2 + s3) / 3
+    return s >= 90 ? "A" : s >= 80 ? "B" : s >= 70 ? "C" : s >= 60 ? "D" : "F"
+}
+console.log(getGrade(95, 90, 93)) // A
+console.log(getGrade(44, 55, 52)) // F
