@@ -1047,3 +1047,21 @@ function getGrade (s1, s2, s3) {
 }
 console.log(getGrade(95, 90, 93)) // A
 console.log(getGrade(44, 55, 52)) // F
+//_____________________________________________________________________________________________________________________
+
+
+// Задача №45 Вернуть массив с добавлением номерации элементов (7 kyu Testing 1-2-3)
+// Вариант 1
+function number(array) {
+    let a = 1
+    return array.map(el => `${a++}: ${el}`)
+}
+console.log(number([])) // []
+console.log(number(["j", "b", "I"])) //  ["1: j", "2: b", "3: I"]
+
+// Вариант 2
+function number(array) {
+    return array.map((el, index) => `${index + 1}: ${el}`)
+}
+console.log(number([])) // []
+console.log(number(["j", "b", "I"])) //  ["1: j", "2: b", "3: I"]
