@@ -1074,3 +1074,21 @@ function fakeBin(x) {
     return x.split('').map(el => +el >= 5 ? 1 : 0).join('')
 }
 console.log(fakeBin('45385593107843568')) // '01011110001100111'))
+//_____________________________________________________________________________________________________________________
+
+
+// Задача №47 Найти число отличающееся от остальных (7 kyu Find the stray number)
+// Вариант 1
+function stray(numbers) {
+    const sortNum = numbers.sort((a, b) => a - b)
+    return (sortNum[0] === sortNum[1]) ? sortNum[numbers.length-1] : sortNum[0]
+}
+console.log(stray([1, 1, 2])) // 2
+console.log(stray([2, 1, 1])) // 2
+
+// Вариант 2
+function stray(numbers) {
+    return numbers.reduce((a, b) => a ^ b); // 1^1=0 https://www.codewars.com/kata/57f609022f4d534f05000024/solutions/javascript
+}
+console.log(stray([1, 1, 2])) // 2
+console.log(stray([2, 1, 1])) // 2
