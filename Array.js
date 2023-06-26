@@ -1092,3 +1092,26 @@ function stray(numbers) {
 }
 console.log(stray([1, 1, 2])) // 2
 console.log(stray([2, 1, 1])) // 2
+//_____________________________________________________________________________________________________________________
+
+
+// Задача №48 Заменить строчные буквы на заглавные, а заглавные на строчные (8 kyu altERnaTIng cAsE <=> ALTerNAtiNG CaSe)
+// Вариант 1
+String.prototype.toAlternatingCase = function () {
+    let newStr = ''
+    for (let i = 0; i < this.length; i++) {
+        if (this[i].toLowerCase() === this[i]) {
+            newStr += this[i].toUpperCase()
+        } else newStr += this[i].toLowerCase()
+    }
+    return newStr
+}
+console.log("1a2b3c4d5e".toAlternatingCase()) // "1A2B3C4D5E")
+console.log("hello WORLD".toAlternatingCase()) // "HELLO world"
+
+// Вариант 2
+String.prototype.toAlternatingCase = function () {
+    return this.split('').map(el => el.toLowerCase() === el ? el.toUpperCase() : el.toLowerCase()).join('')
+}
+console.log("1a2b3c4d5e".toAlternatingCase()) // "1A2B3C4D5E")
+console.log("hello WORLD".toAlternatingCase()) // "HELLO world"
