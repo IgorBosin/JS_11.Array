@@ -1115,3 +1115,35 @@ String.prototype.toAlternatingCase = function () {
 }
 console.log("1a2b3c4d5e".toAlternatingCase()) // "1A2B3C4D5E")
 console.log("hello WORLD".toAlternatingCase()) // "HELLO world"
+//_____________________________________________________________________________________________________________________
+
+
+// Задача №49 Удалить одно минимальное значение в массиве (7 kyu Remove the minimum)
+// Вариант 1
+function removeSmallest(numbers) {
+    const minNumber = numbers.reduce((acc, item) => Math.min(acc, item), numbers[0])
+    const copyArray = [...numbers];
+    copyArray.splice((copyArray.indexOf(minNumber)), 1)
+    return copyArray
+}
+console.log(removeSmallest([1, 2, 3, 4, 5])) // [2, 3, 4, 5]
+console.log(removeSmallest([5, 3, 2, 1, 4])) // [5, 3, 2, 4]
+console.log(removeSmallest([2, 2, 1, 2, 1])) // [2, 2, 2, 1]
+
+// Вариант 2
+function removeSmallest(numbers) {
+    let indexOfMin = numbers.indexOf(Math.min(...numbers));
+    return [...numbers.slice(0, indexOfMin), ...numbers.slice(indexOfMin + 1)];
+}
+console.log(removeSmallest([1, 2, 3, 4, 5])) // [2, 3, 4, 5]
+console.log(removeSmallest([5, 3, 2, 1, 4])) // [5, 3, 2, 4]
+console.log(removeSmallest([2, 2, 1, 2, 1])) // [2, 2, 2, 1]
+
+// Вариант 3
+function removeSmallest(numbers) {
+    const minNumber = numbers.reduce((acc, item) => Math.min(acc, item), numbers[0])
+    return numbers.filter((item, index, arr) => index !== arr.indexOf(minNumber));
+}
+console.log(removeSmallest([1, 2, 3, 4, 5])) // [2, 3, 4, 5]
+console.log(removeSmallest([5, 3, 2, 1, 4])) // [5, 3, 2, 4]
+console.log(removeSmallest([2, 2, 1, 2, 1])) // [2, 2, 2, 1]
