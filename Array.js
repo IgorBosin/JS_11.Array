@@ -1147,3 +1147,25 @@ function removeSmallest(numbers) {
 console.log(removeSmallest([1, 2, 3, 4, 5])) // [2, 3, 4, 5]
 console.log(removeSmallest([5, 3, 2, 1, 4])) // [5, 3, 2, 4]
 console.log(removeSmallest([2, 2, 1, 2, 1])) // [2, 2, 2, 1]
+//_____________________________________________________________________________________________________________________
+
+
+// Задача №50 Получить имя домена из url (5 kyu Extract the domain name from a URL)
+// Вариант 1
+function domainName(url){
+    url = url.replace("https://", '');
+    url = url.replace("http://", '');
+    url = url.replace("www.", '');
+    return url.split('.')[0];
+}
+console.log(domainName("http://google.co.jp")) // "google");
+console.log(domainName("www.xakep.ru")) // "xakep");
+console.log(domainName("https://youtube.com"))// "youtube");
+
+// Вариант 2
+function domainName(url){
+    return url.replace(/.+\/\/|www.|\..+/g, '')
+}
+console.log(domainName("http://google.co.jp")) // "google");
+console.log(domainName("www.xakep.ru")) // "xakep");
+console.log(domainName("https://youtube.com"))// "youtube");
