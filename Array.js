@@ -1118,7 +1118,7 @@ console.log("hello WORLD".toAlternatingCase()) // "HELLO world"
 //_____________________________________________________________________________________________________________________
 
 
-// Задача №49 Удалить одно минимальное значение в массиве (7 kyu Remove the minimum)
+// Задача №49 Удалить первое минимальное значение в массиве, не изменяя его (7 kyu Remove the minimum)
 // Вариант 1
 function removeSmallest(numbers) {
     const minNumber = numbers.reduce((acc, item) => Math.min(acc, item), numbers[0])
@@ -1169,3 +1169,24 @@ function domainName(url){
 console.log(domainName("http://google.co.jp")) // "google");
 console.log(domainName("www.xakep.ru")) // "xakep");
 console.log(domainName("https://youtube.com"))// "youtube");
+//_____________________________________________________________________________________________________________________
+
+
+// Задача №51 Получить максимальное и минимальное число в массиве в порядке возрастания (7 kyu The highest profit wins!)
+// Вариант 1
+function minMax(arr) {
+    return (arr.length <= 1)
+        ? arr.concat(arr[0])
+        : arr.sort((a, b) => a - b).filter((item, index, array) => index === 0 || index === array.length - 1)
+}
+console.log(minMax([1, 2, 3, 4, 5]))  // [1, 5]
+console.log(minMax([2334454, 5]))  // [5, 2334454]
+console.log(minMax([5]))  // [5, 5]
+// Вариант 2
+
+function minMax(arr){
+    return [Math.min(...arr), Math.max(...arr)];
+}
+console.log(minMax([1, 2, 3, 4, 5]))  // [1, 5]
+console.log(minMax([2334454, 5]))  // [5, 2334454]
+console.log(minMax([5]))  // [5, 5]
